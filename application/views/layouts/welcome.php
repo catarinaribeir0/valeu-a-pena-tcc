@@ -21,7 +21,6 @@
 <?php	
    $this->load->view("layouts\cabecalho");
 ?>
-    
 </head>
   <body>
 
@@ -202,17 +201,17 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="well">
-                   <img class="img-responsive" src="images/gallery/gallery1.jpg" />
+                   <img class="img-responsive" src="https://scontent.fsod4-1.fna.fbcdn.net/v/t1.0-9/22008266_1586887777998243_4817197258739246334_n.jpg?_nc_cat=111&oh=a6b87e16e6978b638e3b092f29dd0568&oe=5C5FC7C1" />
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="well">
-                    <img class="img-responsive"  src="images/gallery/gallery2.jpg" />
+                    <img class="img-responsive"  src="https://scontent.fsod4-1.fna.fbcdn.net/v/t1.0-9/31815445_1839747492712269_1450118638601240576_n.jpg?_nc_cat=102&oh=451c32dd5ab38ea5e15d8820a94d6e4a&oe=5C6122E8" />
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="well">
-                    <img class="img-responsive"  src="images/gallery/gallery3.jpg" />
+                    <img class="img-responsive"  src="https://scontent.fsod4-1.fna.fbcdn.net/v/t1.0-9/22046612_1586887591331595_8284458241820219911_n.jpg?_nc_cat=111&oh=e8561115b729a408a01cbae78f5961b1&oe=5C55F39A" />
                 </div>
             </div>
         </div>
