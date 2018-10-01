@@ -29,9 +29,9 @@
 ?>
 
  <!-- Carousel -->
-    <div id="theme-carousel" class="carousel slide" data-ride="carousel">
+   <!-- <div id="theme-carousel" class="carousel slide" data-ride="carousel">-->
         <!-- Wrapper for slides -->
-        <div class="carousel-inner" role="listbox">
+       <!--  <div class="carousel-inner" role="listbox">
             <div class="item active">
                 <img src="images/carousel1b.jpg" alt="carousel1" style="width: 100%" />
                 <div class="carousel-caption">
@@ -77,18 +77,18 @@
             </div>
         </div>
         <!-- Controls -->
-        <a class="left carousel-control" href="#theme-carousel" role="button" data-slide="prev">
+        <!--<a class="left carousel-control" href="#theme-carousel" role="button" data-slide="prev">
             <div class="carousel-control-arrow">&#8249;</div>
         </a>
         <a class="right carousel-control" href="#theme-carousel" role="button" data-slide="next">
             <div class="carousel-control-arrow">&#8250;</div>
         </a>
-    </div>
+    </div>-->
 
 <div class="container-about">
     <div class="container">
 	    <div class="page-header" id="home">
-		    <h1 class="text-primary  text-center">Sobre Nós</h1>
+		   <!-- <h1 class="text-primary  text-center">Sobre</h1>-->
 	    </div>
 		<div class="row">
 		<div class="col-md-6">
@@ -98,25 +98,22 @@
 			<div>
 			  <!-- Nav tabs -->
 			  <ul class="nav nav-tabs" role="tablist">
-				<li role="presentation" class="active"><a href="#mission" aria-controls="mission" role="tab" data-toggle="tab" style="font-size:20px;">Missão</a></li>
-				<li role="presentation"><a href="#goal" aria-controls="goal" role="tab" data-toggle="tab" style="font-size:20px;">Objetivo</a></li>
-				<li role="presentation"><a href="#vision" aria-controls="vision" role="tab" data-toggle="tab" style="font-size:20px;">Visão</a></li>
+				<li role="presentation" class="active"><a href="#mission" aria-controls="mission" role="tab" data-toggle="tab" style="font-size:20px;">O que é Valeu a Pena?</a></li>
+				<li role="presentation"><a href="#goal" aria-controls="goal" role="tab" data-toggle="tab" style="font-size:20px;">Missão</a></li>
+				<li role="presentation"><a href="#vision" aria-controls="vision" role="tab" data-toggle="tab" style="font-size:20px;"> Visão e valores</a></li>
 			  </ul>
 
 			  <!-- Tab panes -->
 			  <div class="tab-content">
 				<br />
-				<div role="tabpanel" class="tab-pane active text-justify" id="mission">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+				<div role="tabpanel" class="tab-pane active text-justify" id="mission">O <b>Valeu a Pena?</b> é um portal com objetivo de concentrar informações de bacharéis em Sistemas de Informação pela Universidade Federal Fluminense a fim de que os próprios alunos possam opinar sobre o curso e servir como base para aqueles que prentendem ingressar.
 				<br />
-				<button class="button-more-success btn" type="button" style="margin:10px;">READ MORE</button>
 				</div>
-				<div role="tabpanel" class="tab-pane text-justify" id="goal">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+				<div role="tabpanel" class="tab-pane text-justify" id="goal">Promover de forma integrada a produção e difusão do conhecimento científico, tecnológico, artístico e cultural, e a formação de um cidadão imbuído de valores éticos que, com competência técnica, contribua para o desenvolvimento econômico-social auto-sustentado do Brasil.
 				<br />
-				<button class="button-more-success btn" type="button" style="margin:10px;">READ MORE</button>
 				</div>
-				<div role="tabpanel" class="tab-pane text-justify" id="vision">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia.
+				<div role="tabpanel" class="tab-pane text-justify" id="vision"> Ser reconhecida nacional e internacionalmente pela excelência do curso, sua produção científica e pelo impacto social das suas atividades.
 				<br />
-				<button class="button-more-success btn" type="button" style="margin:10px;">READ MORE</button>
 				</div>
 				</div>
 			</div>
@@ -125,48 +122,231 @@
     </div>
 </div>
 
+<div class="container-gallery">
+    <div class="container">
+        <div class="page-header" id="gallery">
+            <h1 class="text-center text-primary">Depoimentos</h1>
+        </div>
+        <section class="testimonials_area p_120">
+        	<div class="container">
+        		<div class="testi_slider owl-carousel">
+        			<div class="item">
+        				<div class="testi_item">
+							<div class="media">
+								<!--<div class="d-flex">
+                                <img class="img-fluid" src="images/team/testi-1.png">
+								</div>-->
+								<div class="media-body">
+									<p>Curso voltado ao mercado, com menos teoria e mais prática.</p>
+									<h4>Marcus Vinicius</h4>
+									<h5>Desenvolvedor Android em Full Lab</h5>
+								</div>
+							</div>
+        				</div>
+        			</div>
+        			<div class="item">
+        				<div class="testi_item">
+							<div class="media">
+							<!--<div class="d-flex">
+									<img src="images/team/testi-1.png" alt="">
+								</div>-->
+								<div class="media-body">
+									<p>Sou eternamente grata à todos os professores por serem maravilhosos. Sem eles, não teria chegado até aqui!</p>
+									<h4>Ana Barroso</h4>
+									<h5>Product Manager em Microsoft</h5>
+								</div>
+							</div>
+        				</div>
+                    </div>
+                    <div class="item">
+        				<div class="testi_item">
+							<div class="media">
+								<!--<div class="d-flex">
+									<img src="images/team/team-2.png" alt="">
+								</div>-->
+								<div class="media-body">
+									<p>Acredito que o curso tenha me disponibilizado tudo o que o mercado necessita!</p>
+									<h4>Luiz Barbosa</h4>
+									<h5>Engenheira de software em B2W</h5>
+								</div>
+							</div>
+        				</div>
+                    </div>
+                    <div class="item">
+        				<div class="testi_item">
+							<div class="media">
+								<!--<div class="d-flex">
+									<img src="images/team/team-2.png" alt="">
+								</div>-->
+								<div class="media-body">
+									<p>Curso muito bom, com professores exigentes porém muito atenciosos. Indico para todos!</p>
+									<h4>Mariana Alves</h4>
+									<h5>Analista de sistemas em Globo.com</h5>
+								</div>
+							</div>
+        				</div>
+                    </div>
+                    <div class="item">
+        				<div class="testi_item">
+							<div class="media">
+								<!--<div class="d-flex">
+									<img src="images/team/team-2.png" alt="">
+								</div>-->
+								<div class="media-body">
+									<p>Amei esta experiência... Os laboratórios são novos, com boa infraestrutura e professores sempre atualizados nas novas tecnologias!</p>
+									<h4>Rodrigo Monte</h4>
+									<h5>Cientista de dados em Google</h5>
+								</div>
+							</div>
+        				</div>
+        			</div>
+        		</div>
+        	</div>  
+        		</div>
+            </div>
+        </section>
 
 <div class="container-stories">
 	 <div class="container">
 	    <div class="page-header" id="stories">
-		    <h1 class="text-primary text-center">Depoimentos</h1>
+		    <h1 class="text-primary text-center">Ex-alunos</h1>
 	    </div>
-		<div class="row">
-			<div class="col-md-6">
-				<div class="row">
-					<div class="col-md-3">
-						<img class="img-responsive" src="images/image2.jpg" />
-					</div>
-					<div class="col-md-8">
-						<h3>Isabella</h3>
-						<p>and Rex</p>
-						<br />
-						<p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-						<br />
-						<button class="button-more-success btn" type="button" style="margin:10px;">READ MORE</button>
-						<br />
-					</div>
-				</div>
-			</div>
-			 <div class="col-md-6">
-				<div class="row">
-					<div class="col-md-3">
-						<img class="img-responsive" src="images/image2.jpg" />
-					</div>
-					<div class="col-md-8">
-						<h3>Isabella</h3>
-						<p>and Rex</p>
-						<br />
-						<p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-						<br />
-						<button class="button-more-success btn" type="button" style="margin:10px;">READ MORE</button>
-						<br />
-					</div>
-				</div>
-			</div>
-
+		<div class="testi_slider owl-carousel">
+        <section class="team_area p_120">
+        		<div class="row team_inner">
+        			<div class="col-lg-3 col-sm-4">
+        				<div class="team_item">
+        					<div class="team_img">
+        						<img class="img-fluid" src="./images/team/team-1.jpg" alt="">
+        						<div class="hover">
+        							<a href="#"><i class="fa fa-facebook"></i></a>
+        							<a href="#"><i class="fa fa-twitter"></i></a>
+        							<a href="#"><i class="fa fa-linkedin"></i></a>
+                                </div>
+        					</div>
+        					<div class="team_name">
+        						<h4>João da Silva</h4>
+        						<b>Atualmente: </b><p>Desenvolvedor Java em X</p>
+        					</div>
+        				</div>
+        			</div>
+        			<div class="col-lg-3 col-sm-4">
+        				<div class="team_item">
+        					<div class="team_img">
+        						<img class="img-fluid" src="images/team/team-2.jpg" alt="">
+        						<div class="hover">
+        							<a href="#"><i class="fa fa-facebook"></i></a>
+        							<a href="#"><i class="fa fa-twitter"></i></a>
+        							<a href="#"><i class="fa fa-linkedin"></i></a>
+        						</div>
+        					</div>
+        					<div class="team_name">
+        						<h4>Henrique Matos</h4>
+        						<b>Atualmente: </b><p>UX designer em Full Lab</p>
+        					</div>
+        				</div>
+        			</div>
+        			<div class="col-lg-3 col-sm-4">
+        				<div class="team_item">
+        					<div class="team_img">
+        						<img class="img-fluid" src="images/team/team-3.jpg" alt="">
+        						<div class="hover">
+        							<a href="#"><i class="fa fa-facebook"></i></a>
+        							<a href="#"><i class="fa fa-twitter"></i></a>
+        							<a href="#"><i class="fa fa-linkedin"></i></a>
+        						</div>
+        					</div>
+        					<div class="team_name">
+        						<h4>Gabriel Oliveira</h4>
+        						<b>Atualmente: </b><p>Analista de sistemas em B2W</p>
+        					</div>
+        				</div>
+        			</div>
+        			<div class="col-lg-3 col-sm-4">
+        				<div class="team_item">
+        					<div class="team_img">
+        						<img class="img-fluid" src="images/team/team-4.jpg" alt="">
+        						<div class="hover">
+        							<a href="#"><i class="fa fa-facebook"></i></a>
+        							<a href="#"><i class="fa fa-twitter"></i></a>
+        							<a href="#"><i class="fa fa-linkedin"></i></a>
+        						</div>
+        					</div>
+        					<div class="team_name">
+        						<h4>Marina Pereira</h4>
+        						<b>Atualmente: </b><p>Engenheira de software em Stone</p>
+        					</div>
+        				</div>
+                    </div>
+                    <div class="col-lg-3 col-sm-4">
+        				<div class="team_item">
+        					<div class="team_img">
+        						<img class="img-fluid" src="images/team/team-5.jpg" alt="">
+        						<div class="hover">
+        							<a href="#"><i class="fa fa-facebook"></i></a>
+        							<a href="#"><i class="fa fa-twitter"></i></a>
+        							<a href="#"><i class="fa fa-linkedin"></i></a>
+        						</div>
+        					</div>
+        					<div class="team_name">
+        						<h4>Júlia Oliveira</h4>
+        						<b>Atualmente: </b><p>Agile specialist em Google</p>
+        					</div>
+        				</div>
+                    </div>
+                    <div class="col-lg-3 col-sm-4">
+        				<div class="team_item">
+        					<div class="team_img">
+        						<img class="img-fluid" src="images/team/team-6.jpg" alt="">
+        						<div class="hover">
+        							<a href="#"><i class="fa fa-facebook"></i></a>
+        							<a href="#"><i class="fa fa-twitter"></i></a>
+        							<a href="#"><i class="fa fa-linkedin"></i></a>
+        						</div>
+        					</div>
+        					<div class="team_name">
+        						<h4>Pedro Pereira</h4>
+        						<b>Atualmente: </b><p>Analista de TI em ALERJ</p>
+        					</div>
+        				</div>
+                    </div>
+                    <div class="col-lg-3 col-sm-4">
+        				<div class="team_item">
+        					<div class="team_img">
+        						<img class="img-fluid" src="images/team/team-7.jpg" alt="">
+        						<div class="hover">
+        							<a href="#"><i class="fa fa-facebook"></i></a>
+        							<a href="#"><i class="fa fa-twitter"></i></a>
+        							<a href="#"><i class="fa fa-linkedin"></i></a>
+        						</div>
+        					</div>
+        					<div class="team_name">
+        						<h4>Lucas Teixeira</h4>
+        						<b>Atualmente: </b><p>Consultor de TI em Visagio</p>
+        					</div>
+        				</div>
+                    </div>
+                    <div class="col-lg-3 col-sm-4">
+        				<div class="team_item">
+        					<div class="team_img">
+        						<img class="img-fluid" src="images/team/team-8.jpg" alt="">
+        						<div class="hover">
+        							<a href="#"><i class="fa fa-facebook"></i></a>
+        							<a href="#"><i class="fa fa-twitter"></i></a>
+        							<a href="#"><i class="fa fa-linkedin"></i></a>
+        						</div>
+        					</div>
+        					<div class="team_name">
+        						<h4>Luciana Farias</h4>
+        						<b>Atualmente: </b><p>Desenvolvedora WEB em TAM</p>
+        					</div>
+        				</div>
+                    </div>
+        		</div>
+        	</div>
+        </section>
 		</div>
-		<br />
+		<!--<br />
 		<br />
 	    <div class="row">
 			<div class="col-md-12">
@@ -184,38 +364,14 @@
 						<br />
 					</div>
 				</div>
-			</div>
+			</div>-->
 
 		</div>
 		
 	</div>
-</div>
 
 
-
-<div class="container-gallery">
-    <div class="container">
-        <div class="page-header" id="gallery">
-            <h1 class="text-center text-primary">Egresso de Sistemas de Informação</h1>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="well">
-                   <img class="img-responsive" src="https://scontent.fsod4-1.fna.fbcdn.net/v/t1.0-9/22008266_1586887777998243_4817197258739246334_n.jpg?_nc_cat=111&oh=a6b87e16e6978b638e3b092f29dd0568&oe=5C5FC7C1" />
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="well">
-                    <img class="img-responsive"  src="https://scontent.fsod4-1.fna.fbcdn.net/v/t1.0-9/31815445_1839747492712269_1450118638601240576_n.jpg?_nc_cat=102&oh=451c32dd5ab38ea5e15d8820a94d6e4a&oe=5C6122E8" />
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="well">
-                    <img class="img-responsive"  src="https://scontent.fsod4-1.fna.fbcdn.net/v/t1.0-9/22046612_1586887591331595_8284458241820219911_n.jpg?_nc_cat=111&oh=e8561115b729a408a01cbae78f5961b1&oe=5C55F39A" />
-                </div>
-            </div>
-        </div>
-        <div class="row">
+        <!--<div class="row">
             <div class="col-md-4">
                 <div class="well">
                     <img class="img-responsive"  src="images/gallery/gallery4.jpg" />
@@ -249,7 +405,7 @@
                 </div>
             </div>
         </div>
-    </div>
+</div>
 </div>
 
 <div class="container-contact">
@@ -308,14 +464,7 @@
 <footer id="subfooter" class="clearfix">
     <div class="container">
         <div class="row text-justify">
-            <div class="col-md-6">
-				<h3>Contate o Instituto:</h3>
-				<br>
-				<i class="lnr lnr-home"></i>
-				<p>Av. Gal. Milton Tavares de Souza, s/nº São Domingos - Niterói - RJ. CEP: 24210-346</p>	
-				<p>(21) 2629-5667</p>	
-				<p>secretaria.bsi@ic.uff.br</p>	
-				<hr style="border-color:#bbb;">
+            <div class="col-md-12">
 				<p>Desenvolvido por: Catarina Ribeiro e Duerton Ralph</p>
             </div>
 			<!--<div class="col-md-4">
