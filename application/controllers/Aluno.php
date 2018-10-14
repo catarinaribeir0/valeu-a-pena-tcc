@@ -165,4 +165,11 @@ class Aluno extends CI_Controller {
         $this->index();
     }
 
+    function home()
+    {
+        $data['Título_da_pagina'] = 'Aluno logado!';
+        $data['_view'] = 'aluno/home';
+        $this->load->view('layouts/main',$data);
+    }
+
 }
