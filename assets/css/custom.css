@@ -1,0 +1,44 @@
+.oque-e {
+    padding: 100px
+}
+
+.img-custom {
+    border-radius: 20px;
+}
+
+b {
+    color: #33b672 !important;
+}
+
+.a-infos  {
+    color: #33b672;
+}
+
+.a-infos:focus {
+    color: #33b672;
+}
+
+.a-header {
+    color: #FFFFFF;
+}
+
+.custom-title {
+    line-height: 10px;
+    margin-bottom: 10px;
+    color: #ecf0f1;
+}
+
+.custom-subtitle {
+    color: #ecf0f1;
+    margin-left: 20px;
+    margin-top: 0px;
+}
+
+.custom-navbar {
+    background-color: #33b672;
+    border-color: #33b672;
+}
+
+.custom-text-primary {
+    color: #27ae60;
+}
