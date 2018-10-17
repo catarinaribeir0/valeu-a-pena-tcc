@@ -86,7 +86,6 @@ button:focus {
 }
 
 .p_120 {
-  padding-top: 120px;
   padding-bottom: 120px;
 }
 
@@ -3745,7 +3744,7 @@ h6 {
 
 .team_item .team_img:before {
   content: "";
-  background: rgba(250, 183, 0, 0.85);
+  background: rgba(51,182,114, 0.85);
   position: absolute;
   left: 0px;
   top: 0px;
@@ -3774,7 +3773,7 @@ h6 {
 
 .team_item .team_img .hover a {
   font-size: 14px;
-  color: #222222;
+  color: #FFFFFF;
   margin-right: 20px;
   opacity: .3;
 }

@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="./assets/css/lightbox/simpleLightbox.css">
         <link rel="stylesheet" href="./assets/css/nice-select/css/nice-select.css">
         <link rel="stylesheet" href="./assets/css/animate-css/animate.css">
+		<link rel="stylesheet" href="./assets/css/custom.css">
         <!-- main css -->
         <link rel="stylesheet" href="./assets/css/style-idea3.css">
         <link rel="stylesheet" href="./assets/css/responsive.css">
@@ -90,17 +91,17 @@
 	    <div class="page-header" id="home">
 		   <!-- <h1 class="text-primary  text-center">Sobre</h1>-->
 	    </div>
-		<div class="row">
-		<div class="col-md-6">
-			<img class="img-responsive" src="images/image1.jpg"/>
-		</div>
-		<div class="col-md-6">
+		<div class="row oque-e">
+			<div class="col-md-6">
+				<img class="img-responsive img-custom" src="images/image1.jpg"/>
+			</div>
+			<div class="col-md-6">
 			<div>
 			  <!-- Nav tabs -->
 			  <ul class="nav nav-tabs" role="tablist">
-				<li role="presentation" class="active"><a href="#mission" aria-controls="mission" role="tab" data-toggle="tab" style="font-size:20px;">O que é Valeu a Pena?</a></li>
-				<li role="presentation"><a href="#goal" aria-controls="goal" role="tab" data-toggle="tab" style="font-size:20px;">Missão</a></li>
-				<li role="presentation"><a href="#vision" aria-controls="vision" role="tab" data-toggle="tab" style="font-size:20px;"> Visão e valores</a></li>
+				<li role="presentation"><a href="#mission"  class="a-infos" aria-controls="mission" role="tab" data-toggle="tab" style="font-size:15px;">O que é Valeu a Pena?</a></li>
+				<li role="presentation"><a href="#goal" aria-controls="goal" class="a-infos" role="tab" data-toggle="tab" style="font-size:15px;">Missão</a></li>
+				<li role="presentation"><a href="#vision" aria-controls="vision" class="a-infos" role="tab" data-toggle="tab" style="font-size:15px;"> Visão e valores</a></li>
 			  </ul>
 
 			  <!-- Tab panes -->
@@ -125,7 +126,7 @@
 <div class="container-gallery">
     <div class="container">
         <div class="page-header" id="gallery">
-            <h1 class="text-center text-primary">Depoimentos</h1>
+            <h1 class="text-center custom-text-primary">Depoimentos</h1>
         </div>
         <section class="testimonials_area p_120">
         	<div class="container">
@@ -209,7 +210,7 @@
 <div class="container-stories">
 	 <div class="container">
 	    <div class="page-header" id="stories">
-		    <h1 class="text-primary text-center">Ex-alunos</h1>
+		    <h1 class="custom-text-primary text-center">Ex-alunos</h1>
 	    </div>
 		<div class="testi_slider owl-carousel">
         <section class="team_area p_120">
@@ -219,9 +220,9 @@
         					<div class="team_img">
         						<img class="img-fluid" src="./images/team/team-1.jpg" alt="">
         						<div class="hover">
-        							<a href="#"><i class="fa fa-facebook"></i></a>
-        							<a href="#"><i class="fa fa-twitter"></i></a>
-        							<a href="#"><i class="fa fa-linkedin"></i></a>
+        							<a href="#"><i class="fa fa-facebook custom-icon"></i></a>
+        							<a href="#"><i class="fa fa-twitter custom-icon"></i></a>
+        							<a href="#"><i class="fa fa-linkedin custom-icon"></i></a>
                                 </div>
         					</div>
         					<div class="team_name">
@@ -408,10 +409,12 @@
 </div>
 </div>
 
+-->
+
 <div class="container-contact">
     <div class="container">
 	    <div class="page-header" id="contact">
-			<h2 class="text-center text-primary">Contato</h2>
+			<h2 class="text-center custom-text-primary">Contato</h2>
 			<br>
 			<div class="row">
                     <div class="col-lg-3">
@@ -467,78 +470,11 @@
             <div class="col-md-12">
 				<p>Desenvolvido por: Catarina Ribeiro e Duerton Ralph</p>
             </div>
-			<!--<div class="col-md-4">
-				<h3>Animals For Adoption</h3>
-				<br />
-                 <div class="row text-justify">
-					<div class="col-md-4">
-						<img class="img-responsive" src="images/gallery/gallery1.jpg" />
-					</div>
-					<div class="col-md-8">
-						<p>What is Lorem Ipsum?</p>
-					</div>
-				</div>
-				<div class="row text-justify">
-					<div class="col-md-6">
-						<img class="img-responsive" src="images/gallery/gallery2.jpg" />
-					</div>
-					<div class="col-md-8">
-						<p>Where does it come from?</p>
-					</div>
-				</div>
-				<br />
-				<div class="row text-justify">
-					<div class="col-md-4">
-						<img class="img-responsive" src="images/gallery/gallery3.jpg" />
-					</div>
-					<div class="col-md-8">
-						<p>Why do we use it?</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-                <h3>Last Adopted</h3>
-				<br />
-				<div class="row text-justify">
-					<div class="col-md-4">
-						<img class="img-responsive" src="images/image4.jpg" />
-					</div>
-					<div class="col-md-8">
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-					</div>
-				</div>
-				<br />
-				<div class="row text-justify">
-					<div class="col-md-4">
-						<img class="img-responsive" src="images/image2.jpg" />
-					</div>
-					<div class="col-md-8">
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-					</div>
-				</div>
-            </div>
-        </div>-->
-    </div>
+		</div>
+	</div>
 </footer>
 
-<!-- <footer class="footer-area p_120">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3  col-md-6 col-sm-6">
-                        <div class="single-footer-widget ab_wd">
-                            <h6 class="footer_title">Sobre nós</h6>
-                            <p>Portal desenvolvido pelos ex-alunos Catarina Ribeiro e Duerton Ralph.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="single-footer-widget contact_wd">
-                            <h6 class="footer_title">Contate o Instituto:</h6>
-                            <p>Av. Gal. Milton Tavares de Souza, s/nº São Domingos - Niterói - RJ. CEP: 24210-346</p>	
-                            <b>(21) 2629-5667</b>		
-							<br>							
-                            <b>secretaria.bsi@ic.uff.br</b>			
-                        </div>
-                    </div>	-->					
+ 			
 
   <script src="<?php echo base_url() ?>assets/js/jquery.min.js"></script>
   <script src="<?php echo base_url() ?>assets/bootstrap/js/bootstrap.min.js"></script>
