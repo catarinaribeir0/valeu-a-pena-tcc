@@ -74,4 +74,14 @@ class Aluno_model extends CI_Model
     {
         return $this->db->delete('alunos',array('id'=>$id));
     }
+
+    function login($match) {
+
+        $this->db->select('nome, cpf, email');
+        $this->db->from('alunos');
+        $this->db->where($match);
+        $this->db->limit(1);
+        $query = $this->db->get();
+        return $query->row_array();
+    }
 }

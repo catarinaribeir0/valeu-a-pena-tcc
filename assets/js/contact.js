@@ -14,11 +14,11 @@ $(document).ready(function(){
             rules: {
                 name: {
                     required: true,
-                    minlength: 2
+                    minlength: 5
                 },
                 subject: {
                     required: true,
-                    minlength: 4
+                    minlength: 10
                 },
                 number: {
                     required: true,
@@ -29,29 +29,27 @@ $(document).ready(function(){
                     email: true
                 },
                 message: {
-                    required: true,
-                    minlength: 20
+                    required: true
                 }
             },
             messages: {
                 name: {
-                    required: "come on, you have a name, don't you?",
-                    minlength: "your name must consist of at least 2 characters"
+                    required: "O nome é obrigatório",
+                    minlength: "Seu nome necessita ao menos 5 caracteres"
                 },
                 subject: {
-                    required: "come on, you have a subject, don't you?",
-                    minlength: "your subject must consist of at least 4 characters"
+                    required: "O assunto é obrigatório",
+                    minlength: "O assunto necessita ao menos 10 caracteres"
                 },
                 number: {
                     required: "come on, you have a number, don't you?",
                     minlength: "your Number must consist of at least 5 characters"
                 },
                 email: {
-                    required: "no email, no message"
+                    required: "O e-mail é obrigatório"
                 },
                 message: {
-                    required: "um...yea, you have to write something to send this form.",
-                    minlength: "thats all? really?"
+                    required: "A mensagem é obrigatória"
                 }
             },
             submitHandler: function(form) {
