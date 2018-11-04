@@ -18,7 +18,7 @@
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		   <ul class="nav navbar-nav navbar-left nav-custom">
 				<li><h2 class="custom-title"><strong>Valeu a pena?</strong></h2></li>
-				<p class="custom-subtitle">Sistema de Informação - UFF</p>
+				<p class="custom-subtitle">Sistemas de Informação - UFF</p>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="#home" class="smooth-scroll a-header">Sobre</a></li>

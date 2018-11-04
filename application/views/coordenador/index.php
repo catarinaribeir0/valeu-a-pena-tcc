@@ -3,14 +3,13 @@
         <p></p>
 </div>
 
-
-
 <table class="table table-striped table-bordered">
+<div class="row oque-e">
     <tr>
 		<th>ID</th>
 		<th>Nome</th>
-		<th>Cpf</th>
-		<th>Email</th>
+		<th>CPF</th>
+		<th>E-mail</th>
 		<th>Ações</th>
     </tr>
 	<?php foreach($coordenador as $c){ ?>
@@ -28,4 +27,5 @@
 </table>
 <div class="pull-right">
     <?php echo $this->pagination->create_links(); ?>    
+</div>
 </div>

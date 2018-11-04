@@ -1,29 +1,54 @@
-<div class="pull-left">
-	<a href="<?php echo site_url('aluno/add'); ?>" class="btn btn-success">Incluir</a> 
-        <p></p>
-</div>
+<div class="container bootstrap snippet aluno-info">
 
-<table class="table table-striped table-bordered">
-    <tr>
-		<th>ID</th>
-		<th>Nome</th>
-		<th>Matricula</th>
-		<th>Ações</th>
-    </tr>
-	<?php foreach($alunos as $a){ ?>
-    <tr>
-		<td><?php echo $a['id']; ?></td>
-		<td><?php echo $a['nome']; ?></td>
-		<td><?php echo $a['matricula']; ?></td>
-		<td>
-            <a href="<?php echo site_url('aluno/edit/'.$a['id']); ?>" class="btn btn-info btn-xs">Editar</a> 
-            <a href="<?php echo site_url('aluno/aprovar/'.$a['id']); ?>" class="btn btn-warning btn-xs">(Des)Aprovar</a>
-            <a href="<?php echo site_url('aluno/habilitar/'.$a['id']); ?>" class="btn btn-warning btn-xs">(Des)Habilitar</a>
-            <a href="<?php echo site_url('aluno/remove/'.$a['id']); ?>" class="btn btn-danger btn-xs">Excluir</a>
-        </td>
-    </tr>
-	<?php } ?>
-</table>
-<div class="pull-right">
-    <?php echo $this->pagination->create_links(); ?>    
-</div>
+    <div class="row">
+  		<div class="col-sm-3">              
+
+      <div class="text-center">
+        <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
+        <h6>Faça o upload da sua foto</h6>
+        <input type="file" class="text-center center-block file-upload">
+      </div></hr><br>
+
+       <!--        
+          <div class="panel panel-default">
+            <div class="panel-heading">Website <i class="fa fa-link fa-1x"></i></div>
+            <div class="panel-body"><a href="http://bootnipets.com">bootnipets.com</a></div>
+          </div>
+          -->
+          
+          <ul class="list-group">
+            <li class="list-group-item text-left"><strong><a onclick="openLink(event, 'edit')">Editar dados</a> </strong> <i class="fa fa-edit fa-1x"></i></li>         
+            <li class="list-group-item text-left"><strong><a onclick="openLink(event, 'show')">Visualizar colegas de classe</a></strong> <i class="fa fa-users"></i></li>
+            <li class="list-group-item text-left"><strong><a onclick="openLink(event, 'show')">Seus depoimentos</a></strong> <i class="fa fa-comments"></i></li>
+            <li class="list-group-item text-left"><strong><a  href="<?php echo site_url('aluno/msg-recebidas'); ?>">Mensagens recebidas</a></strong></strong> <i class="fa fa-envelope"></i></li>
+            <li class="list-group-item text-left"><strong><a  href="<?php echo site_url('aluno/msg-enviadas'); ?>">Mensagens enviadas</a></strong> <i class="fa fa-envelope-open"></i></li>
+          </ul> 
+        
+        <!--         
+          <div class="panel panel-default">
+            <div class="panel-heading">Social Media</div>
+            <div class="panel-body">
+            	<i class="fa fa-facebook fa-2x"></i> <i class="fa fa-github fa-2x"></i> <i class="fa fa-twitter fa-2x"></i> <i class="fa fa-pinterest fa-2x"></i> <i class="fa fa-google-plus fa-2x"></i>
+            </div>
+          </div>
+        </div>
+        -->
+    </div>
+    
+    <div class="col-sm-9">
+        <div class="container"> 
+
+            <div id="edit" class="custom-tab">
+                <h3>Edit</h3>
+                <p>London is the capital city of England.</p>
+            </div>
+
+            <div id="show" class="custom-tab">
+                <h3>Show</h3>
+                <p>London is the capital city of England.</p>
+            </div>
+        </div>
+    </div>
+
+    </div>
+</div>                                            

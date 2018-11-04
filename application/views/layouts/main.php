@@ -33,7 +33,7 @@
 
 
             <footer id="subfooter" class="clearfix">
-                <div class="container">
+                <div class="container ajuste-footer">
                     <div class="row text-justify">
                         <div class="col-md-12">
                             <p>Desenvolvido por: Catarina Ribeiro e Duerton Ralph</p>
@@ -46,7 +46,8 @@
         <!-- JavaScript -->
         <script src="<?php echo base_url() ?>assets/js/jquery-3.2.1.min.js"></script>
         <script src="<?php echo base_url() ?>assets/js/popper.js"></script>
-        <script src="<?php echo base_url() ?>assets/js/bootstrap.min.js"></script>      
+        <script src="<?php echo base_url() ?>assets/js/bootstrap.min.js"></script>
+        <script src="<?php echo base_url() ?>assets/js/tcc.js"></script>      
     </body>
 </html>
 
