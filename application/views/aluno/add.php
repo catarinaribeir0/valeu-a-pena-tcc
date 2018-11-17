@@ -23,6 +23,12 @@
           <label class="custom-label" for="nome">E-mail:</label>
 		  <input type="nome" class="form-control" id="email" value="" placeholder="Digite o e-mail" name="email">
 		  <span class="text-danger"><?php echo form_error('email');?></span>
+		</div>
+		
+		<div class="form-group">
+          <label class="custom-label" for="nome">Senha:</label>
+		  <input type="password" class="form-control" id="senha" value="" placeholder="Digite a senha" name="senha">
+		  <span class="text-danger"><?php echo form_error('senha');?></span>
         </div>
 		
 		<div class="form-group">

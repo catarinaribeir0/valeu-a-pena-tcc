@@ -13,17 +13,6 @@ class Aluno extends CI_Controller {
      */
 
     function index() {
-        $params['limit'] = RECORDS_PER_PAGE;
-        $params['offset'] = ($this->input->get('per_page')) ? $this->input->get('per_page') : 0;
-
-        $config = $this->config->item('pagination');
-        $config['base_url'] = site_url('aluno/index?');
-        $config['total_rows'] = $this->Aluno_model->get_all_alunos_count();
-
-        $this->pagination->initialize($config);
-
-        $data['alunos'] = $this->Aluno_model->get_all_alunos($params);
-
         $data['Título_da_pagina'] = '';
         $data['_view'] = 'aluno/index';
         $this->load->view('layouts/main', $data);
@@ -40,6 +29,7 @@ class Aluno extends CI_Controller {
         $this->form_validation->set_rules('cpf', 'Cpf', 'required|max_length[14]');
         $this->form_validation->set_rules('email', 'Email', 'max_length[50]|valid_email');
         $this->form_validation->set_rules('matricula', 'Matricula', 'max_length[9]');
+        $this->form_validation->set_rules('senha', 'Senha', 'max_length[8]');
 
 
 
@@ -49,7 +39,7 @@ class Aluno extends CI_Controller {
                 'cpf' => $this->input->post('cpf'),
                 'email' => $this->input->post('email'),
                 'matricula' => $this->input->post('matricula'),
-                'cadastro_aprovado' => 'N'
+                'senha' => $this->input->post('senha')
             );
 
             $aluno_id = $this->Aluno_model->add_aluno($params);
@@ -157,6 +147,24 @@ class Aluno extends CI_Controller {
     {
         $data['Título_da_pagina'] = 'Aluno logado!';
         $data['_view'] = 'aluno/home';
+        $this->load->view('layouts/main',$data);
+    }
+
+    function lista_alunos()
+    {
+        $params['limit'] = RECORDS_PER_PAGE;
+        $params['offset'] = ($this->input->get('per_page')) ? $this->input->get('per_page') : 0;
+
+        $config = $this->config->item('pagination');
+        $config['base_url'] = site_url('aluno/index?');
+        $config['total_rows'] = $this->Aluno_model->get_all_alunos_count();
+
+        $this->pagination->initialize($config);
+
+        $data['alunos'] = $this->Aluno_model->get_all_alunos($params);
+
+        $data['Título_da_pagina'] = 'Lista de alunos';
+        $data['_view'] = 'aluno/lista_alunos';
         $this->load->view('layouts/main',$data);
     }
 
