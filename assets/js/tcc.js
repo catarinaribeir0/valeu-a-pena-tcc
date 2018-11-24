@@ -33,3 +33,8 @@ function openLink(evt, type) {
     document.getElementById(type).style.display = "block";
     evt.currentTarget.className += " active";
 }
+
+
+function showInput() {
+    document.getElementById('cargoOutro').style.display = 'block';
+}

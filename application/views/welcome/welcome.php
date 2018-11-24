@@ -347,15 +347,13 @@
 <!--  **FIM - CONTATO ** -->
 
 <!--  **INÍCIO - FOOTER ** -->
-        <footer id="subfooter" class="clearfix">
-            <div class="container">
-                <div class="row text-justify">
-                    <div class="col-md-12">
-                        <p>Desenvolvido por: Catarina Ribeiro e Duerton Ralph</p>
-                    </div>
-                </div>
+<footer class="page-footer font-small blue pt-4">
+        <div class="container-fluid text-center">
+            <div class="row">
+                <p>2018. Desenvolvido por Catarina Ribeiro e Duerton Ralph</p>
             </div>
-        </footer>
+        </div>
+    </footer>
 <!--  **FIM - FOOTER ** -->
 
         <script src="<?php echo base_url() ?>assets/js/jquery.min.js"></script>

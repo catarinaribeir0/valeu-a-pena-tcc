@@ -32,15 +32,18 @@
         </div>
 
 
-            <footer id="subfooter" class="clearfix">
-                <div class="container ajuste-footer">
-                    <div class="row text-justify">
-                        <div class="col-md-12">
-                            <p>Desenvolvido por: Catarina Ribeiro e Duerton Ralph</p>
-                        </div>
+           <footer class="page-footer font-small blue pt-4">
+                <!-- Footer Links -->
+                <div class="container-fluid text-center">
+                    <!-- Grid row -->
+                    <div class="row">
+    
+                        <!-- Content -->
+                        <p>2018. Desenvolvido por Catarina Ribeiro e Duerton Ralph</p>
                     </div>
+                    <!-- Grid row -->
                 </div>
-            </footer>
+</footer>
 
         
         <!-- JavaScript -->

@@ -773,3 +773,13 @@ opacity: 1;
   .custom-tab {
     display: none;
   }
+
+  .edit-form {
+    padding-right: 30px;
+    padding-left: 30px;
+    width: 60%;
+  }
+
+  a {
+    cursor: pointer
+  }
