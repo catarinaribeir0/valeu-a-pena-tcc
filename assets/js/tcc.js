@@ -1,4 +1,5 @@
 function openLink(evt, type) {
+
     // Declare all variables
     var i, tabcontent, tablinks;
 
@@ -12,6 +13,20 @@ function openLink(evt, type) {
     tablinks = document.getElementsByClassName("tablinks");
     for (i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    switch(type) {
+        case 'show':
+            document.getElementById('edit').style.display = "none";
+            document.getElementById('depo').style.display = "none";
+        case 'depo':
+           document.getElementById('edit').style.display = "none";
+           document.getElementById('show').style.display = "none";
+        case 'edit':
+           document.getElementById('depo').style.display = "none";
+           document.getElementById('show').style.display = "none";
+        default:
+            break;
     }
 
     // Show the current tab, and add an "active" class to the link that opened the tab

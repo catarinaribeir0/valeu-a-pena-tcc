@@ -19,9 +19,9 @@
         <ul class="list-group">
           <li class="list-group-item text-left"><strong><a onclick="openLink(event, 'edit')">Editar dados</a> </strong> <i class="fa fa-edit fa-1x"></i></li>         
           <li class="list-group-item text-left"><strong><a onclick="openLink(event, 'show')">Visualizar colegas de classe</a></strong> <i class="fa fa-users"></i></li>
-          <li class="list-group-item text-left"><strong><a onclick="openLink(event, 'show')">Seus depoimentos</a></strong> <i class="fa fa-comments"></i></li>
-          <li class="list-group-item text-left"><strong><a  href="<?php echo site_url('aluno/msg-recebidas'); ?>">Mensagens recebidas</a></strong></strong> <i class="fa fa-envelope"></i></li>
-          <li class="list-group-item text-left"><strong><a  href="<?php echo site_url('aluno/msg-enviadas'); ?>">Mensagens enviadas</a></strong> <i class="fa fa-envelope-open"></i></li>
+          <li class="list-group-item text-left"><strong><a onclick="openLink(event, 'depo')">Seus depoimentos</a></strong> <i class="fa fa-comments"></i></li>
+          <!--<li class="list-group-item text-left"><strong><a  href="<?php echo site_url('aluno/msg-recebidas'); ?>">Mensagens recebidas</a></strong></strong> <i class="fa fa-envelope"></i></li>
+          <li class="list-group-item text-left"><strong><a  href="<?php echo site_url('aluno/msg-enviadas'); ?>">Mensagens enviadas</a></strong> <i class="fa fa-envelope-open"></i></li>-->
         </ul> 
       
       <!--         
@@ -43,10 +43,16 @@
           <p>London is the capital city of England.</p>
       </div>
 
-      <div id="show" class="custom-tab">
+      <div id="depo" class="custom-tab">
+          <h3>Depo</h3>
+          <p>London is the capital city of England.</p>
+      </div>
+
+       <div id="show" class="custom-tab">
           <h3>Show</h3>
           <p>London is the capital city of England.</p>
       </div>
+
     </div>
   </div>
 
