@@ -21,12 +21,20 @@
 				<p class="custom-subtitle">Sistemas de Informação - UFF</p>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#home" class="smooth-scroll a-header">Sobre</a></li>
-				<li><a href="#ex-alunos" class="smooth-scroll a-header">Nossos ex-alunos</a></li>
-				<li><a href="#depoimentos" class="smooth-scroll a-header">Depoimentos</a></li>
-                <li><a href="<?php echo base_url('Aluno/Add') ?>" class="smooth-scroll a-header">Registrar</a></li>
-				<li><a href="#contact" class="smooth-scroll a-header">Contato</a></li>
-				<li><a href="<?php echo base_url('Login') ?>" class="smooth-scroll a-header">Login</a></li>
+			<br><br>
+				<?php 
+				if($this->session->userdata('cpf') === null){?>
+					<li><a href="#home" class="smooth-scroll a-header">Sobre</a></li>
+					<li><a href="#ex-alunos" class="smooth-scroll a-header">Nossos ex-alunos</a></li>
+					<li><a href="#depoimentos" class="smooth-scroll a-header">Depoimentos</a></li>
+					<li><a href="<?php echo base_url('Aluno/Add') ?>" class="smooth-scroll a-header">Registrar</a></li>
+					<li><a href="#contact" class="smooth-scroll a-header">Contato</a></li>
+					<li><a href="<?php echo base_url('Login') ?>" class="smooth-scroll a-header">Login</a></li>
+				<?php
+				}else{?>
+					<li><a href="<?php echo base_url('Logout') ?>" class="smooth-scroll a-header">Logout</a></li>
+				<?php
+				}?>
 			</ul>
 		</div><!-- /.navbar-collapse -->
 	</div><!-- /.container-fluid -->

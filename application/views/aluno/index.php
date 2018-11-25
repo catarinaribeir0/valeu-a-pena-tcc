@@ -2,7 +2,13 @@
   <div class="row">
     <div class="col-sm-3">              
     <div class="text-center">
-      <img src="<?php echo base_url() ?>uploads/1.jpg"  class="avatar img-circle img-thumbnail img-resposive" alt="avatar">
+      <img src="<?php echo base_url() ?>uploads/<?php if($this->session->userdata('cpf') !== null)
+        {
+          echo $this->session->userdata('cpf');
+        }else {
+          $data['avatar'] = "avatar";
+          echo $data['avatar'];
+        } ?>.jpg"  class="avatar img-circle img-thumbnail img-resposive" alt="avatar">
       <h6>Faça o upload da sua foto<a href="<?php echo site_url('Upload/Upload_form'); ?>"> aqui</a>.</h6>
     </div></hr><br>
         <ul class="list-group">
@@ -38,7 +44,6 @@
                 <label for="Empresa">Empresa atual:</label>
                 <input type="text" class="form-control" id="empresa" placeholder="Digite a empresa que você trabalha">
             </div>
-
             <!-- * ESTADO CIVIL *-->
           <label for="estado-civil">Estado civil:</label> 
             <div class="form-group">
@@ -94,17 +99,20 @@
  <!-- ** FIM EDIÇÃO DE DADOS ** -->
 
 <!-- ** INÍCIO DEPOIMENTOS ** -->
-      <div id="depo" class="custom-tab">
-        <div class="form-group">
-          <form class="edit-form">
-          <h1 class="custom-text-primary">Depoimento</h1>
-              <label for="depo">Digite aqui sua experiência durante a graduação</label>
-              <textarea class="form-control" id="depo" rows="5"></textarea>
-              <small id="depoHelp" class="form-text text-muted">Lembre-se: seu depoimento ainda será aprovado pela coordenação e será exibido na página inicial!</small>
-          </form>
-        </div>
-      <button type="submit" class="btn btn-success">Salvar</button>
+  <?php echo form_open('Aluno/depoimento').$this->session->userdata('id'); ?>
+    <div id="depo" class="custom-tab">
+      <div class="form-group">
+        <form class="edit-form">
+        <h1 class="custom-text-primary">Depoimento</h1>
+            <label for="depo">Digite aqui sua experiência durante a graduação</label>
+            <textarea class="form-control" id="depo" rows="5"  value="<?php echo $this->session->userdata('depoimento'); ?>"></textarea>
+            <small id="depoHelp" class="form-text text-muted">Lembre-se: seu depoimento ainda será aprovado pela coordenação e será exibido na página inicial!</small>
+        </form>
       </div>
+      <button type="submit" class="btn btn-success">Salvar</button>
+    </div>
+  <?php echo form_close(); ?>
+      
 <!-- ** FIM DEPOIMENTOS ** -->
 
 <!-- ** INÍCIO VISUALIZAR COLEGAS DE CLASSE ** -->

@@ -67,12 +67,7 @@ class Aluno extends CI_Controller {
             $this->form_validation->set_rules('cpf', 'Cpf', 'required|max_length[14]');
             $this->form_validation->set_rules('email', 'Email', 'max_length[50]|valid_email');
             $this->form_validation->set_rules('senha', 'Senha', 'max_length[8]');
-            $this->form_validation->set_rules('telefone', 'Telefone', 'max_length[13]');
             $this->form_validation->set_rules('matricula', 'Matricula', 'max_length[9]');
-            $this->form_validation->set_rules('disponibilidade', 'Disponibilidade', 'max_length[50]');
-            $this->form_validation->set_rules('conhecimento', 'Conhecimento', 'max_length[50]');
-            $this->form_validation->set_rules('periodo', 'Periodo', 'integer');
-            $this->form_validation->set_rules('cadastro_aprovado', 'Cadastro Aprovado', 'required|max_length[1]');
 
             if ($this->form_validation->run()) {
                 $params = array(
@@ -81,12 +76,7 @@ class Aluno extends CI_Controller {
                     'cpf' => $this->input->post('cpf'),
                     'email' => $this->input->post('email'),
                     'senha' => $this->input->post('senha'),
-                    'telefone' => $this->input->post('telefone'),
                     'matricula' => $this->input->post('matricula'),
-                    'disponibilidade' => $this->input->post('disponibilidade'),
-                    'conhecimento' => $this->input->post('conhecimento'),
-                    'periodo' => $this->input->post('periodo'),
-                    'cadastro_aprovado' => $this->input->post('cadastro_aprovado'),
                 );
 
                 $this->Aluno_model->update_aluno($id, $params);
@@ -166,6 +156,14 @@ class Aluno extends CI_Controller {
         $data['Título_da_pagina'] = 'Lista de alunos';
         $data['_view'] = 'aluno/lista_alunos';
         $this->load->view('layouts/main',$data);
+    }
+
+    function depoimento($id) {
+        $aluno = $this->Aluno_model->get_aluno($id);
+        $params = array('depoimento_aprovado' => 'S');
+        $this->Aluno_model->update_aluno($id, $params);
+
+        $this->index();
     }
 
 }
