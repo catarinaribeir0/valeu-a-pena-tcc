@@ -31,21 +31,14 @@
 
         </div>
 
+    <footer class="page-footer font-small blue pt-4">
+        <div class="container-fluid text-center">
+            <div class="row">
+                <p>2018. Desenvolvido por Catarina Ribeiro e Duerton Ralph</p>
+            </div>
+        </div>
+    </footer>
 
-           <footer class="page-footer font-small blue pt-4">
-                <!-- Footer Links -->
-                <div class="container-fluid text-center">
-                    <!-- Grid row -->
-                    <div class="row">
-    
-                        <!-- Content -->
-                        <p>2018. Desenvolvido por Catarina Ribeiro e Duerton Ralph</p>
-                    </div>
-                    <!-- Grid row -->
-                </div>
-</footer>
-
-        
         <!-- JavaScript -->
         <script src="<?php echo base_url() ?>assets/js/jquery-3.2.1.min.js"></script>
         <script src="<?php echo base_url() ?>assets/js/popper.js"></script>

@@ -148,147 +148,86 @@
 <!--  **FIM - DEPOIMENTOS ** -->
 
 <!--  **INÍCIO - EX-ALUNOS ** -->
-        <div class="container-stories">
-            <div class="container">
-                <div class="page-header" id="ex-alunos">
-                    <h1 class="custom-text-primary text-center">Ex-alunos</h1>
-                </div><br>  
-                <div class="testi_slider owl-carousel">
-                    <section class="team_area p_120">
-                        <div class="row team_inner">
-                            <div class="col-lg-3 col-sm-4">
-                                <div class="team_item">
-                                    <div class="team_img">
-                                        <img class="img-fluid" src="./images/team/team-1.jpg" alt="">
-                                        <div class="hover">
-                                            <a href="#"><i class="fa fa-facebook custom-icon"></i></a>
-                                            <a href="#"><i class="fa fa-twitter custom-icon"></i></a>
-                                            <a href="#"><i class="fa fa-linkedin custom-icon"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="team_name">
-                                        <h4>João da Silva</h4>
-                                        <b>Atualmente: </b><p>Desenvolvedor Java em X</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-4">
-                                <div class="team_item">
-                                    <div class="team_img">
-                                        <img class="img-fluid" src="images/team/team-2.jpg" alt="">
-                                        <div class="hover">
-                                            <a href="#"><i class="fa fa-facebook"></i></a>
-                                            <a href="#"><i class="fa fa-twitter"></i></a>
-                                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="team_name">
-                                        <h4>Henrique Matos</h4>
-                                        <b>Atualmente: </b><p>UX designer em Full Lab</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-4">
-                                <div class="team_item">
-                                    <div class="team_img">
-                                        <img class="img-fluid" src="images/team/team-3.jpg" alt="">
-                                        <div class="hover">
-                                            <a href="#"><i class="fa fa-facebook"></i></a>
-                                            <a href="#"><i class="fa fa-twitter"></i></a>
-                                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="team_name">
-                                        <h4>Gabriel Oliveira</h4>
-                                        <b>Atualmente: </b><p>Analista de sistemas em B2W</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-4">
-                                <div class="team_item">
-                                    <div class="team_img">
-                                        <img class="img-fluid" src="images/team/team-4.jpg" alt="">
-                                        <div class="hover">
-                                            <a href="#"><i class="fa fa-facebook"></i></a>
-                                            <a href="#"><i class="fa fa-twitter"></i></a>
-                                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="team_name">
-                                        <h4>Marina Pereira</h4>
-                                        <b>Atualmente: </b><p>Engenheira de software em Stone</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-4">
-                                <div class="team_item">
-                                    <div class="team_img">
-                                        <img class="img-fluid" src="images/team/team-5.jpg" alt="">
-                                        <div class="hover">
-                                            <a href="#"><i class="fa fa-facebook"></i></a>
-                                            <a href="#"><i class="fa fa-twitter"></i></a>
-                                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="team_name">
-                                        <h4>Júlia Oliveira</h4>
-                                        <b>Atualmente: </b><p>Agile specialist em Google</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-4">
-                                <div class="team_item">
-                                    <div class="team_img">
-                                        <img class="img-fluid" src="images/team/team-6.jpg" alt="">
-                                        <div class="hover">
-                                            <a href="#"><i class="fa fa-facebook"></i></a>
-                                            <a href="#"><i class="fa fa-twitter"></i></a>
-                                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="team_name">
-                                        <h4>Pedro Pereira</h4>
-                                        <b>Atualmente: </b><p>Analista de TI em ALERJ</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-4">
-                                <div class="team_item">
-                                    <div class="team_img">
-                                        <img class="img-fluid" src="images/team/team-7.jpg" alt="">
-                                        <div class="hover">
-                                            <a href="#"><i class="fa fa-facebook"></i></a>
-                                            <a href="#"><i class="fa fa-twitter"></i></a>
-                                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="team_name">
-                                        <h4>Lucas Teixeira</h4>
-                                        <b>Atualmente: </b><p>Consultor de TI em Visagio</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-4">
-                                <div class="team_item">
-                                    <div class="team_img">
-                                        <img class="img-fluid" src="images/team/team-8.jpg" alt="">
-                                        <div class="hover">
-                                            <a href="#"><i class="fa fa-facebook"></i></a>
-                                            <a href="#"><i class="fa fa-twitter"></i></a>
-                                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="team_name">
-                                        <h4>Luciana Farias</h4>
-                                        <b>Atualmente: </b><p>Desenvolvedora WEB em TAM</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+<div class="container-stories">
+	 <div class="container">
+	    <div class="page-header" id="ex-alunos">
+        <h1 class="text-center custom-text-primary">Ex alunos</h1>
+	    </div>
+		<div class="row">
+			<div class="col-md-4">
+				<div class="row">
+					<div class="col-md-4">
+						<img class="img-responsive" src="./images/team/team-1.jpg"/>
+					</div>
+					<div class="col-md-4">
+						<h3>Alan Alfradique</h3>
+					    <p class="text-justify">Analista de sistemas em B2W</p>
+                    </div>
+                </div>
+			</div>
+			<div class="col-md-4">
+				<div class="row">
+					<div class="col-md-4">
+						<img class="img-responsive" src="images/team/team-2.jpg" />
+					</div>
+					<div class="col-md-4">
+						<h3>Lucas Oliveira</h3>
+						<p class="text-justify">Cientista de dados em Nubank</p>
+					</div>
+				</div>
+            </div>
+            <div class="col-md-4">
+				<div class="row">
+					<div class="col-md-4">
+						<img class="img-responsive" src="images/team/team-5.jpg" />
+					</div>
+					<div class="col-md-4">
+						<h3>Julia Alves</h3>
+						<p class="text-justify">Produt Manager em Samsung</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br/>
+		<br/>
+		<div class="row">
+			<div class="col-md-4">
+				<div class="row">
+					<div class="col-md-4">
+						<img class="img-responsive" src="images/team/team-3.jpg" />
+					</div>
+					<div class="col-md-4">
+						<h3>Pedro Pereira</h3>
+						<p class="text-justify">Desenvolvedor Android em Google</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="row">
+					<div class="col-md-4">
+						<img class="img-responsive" src="images/image5.jpg" />
+					</div>
+					<div class="col-md-4">
+						<h3>Samuel Andrade</h3>
+						<p class="text-justify">Analista de sistemas em Dell</p>
+					</div>
                 </div>
             </div>
-        </div>
+            <div class="col-md-4">
+				<div class="row">
+					<div class="col-md-4">
+						<img class="img-responsive" src="images/team/team-8.jpg" />
+					</div>
+					<div class="col-md-4">
+						<h3>Luciana Farias</h3>
+						<p class="text-justify">Analista de sistemas em Full Lab</p>
+					</div>
+                </div>
+			</div>
+		</div>
+	</div>
+</div>
+
 <!--  **FIM - EX-ALUNOS ** -->
 
 <!--  **INÍCIO - CONTATO ** -->
