@@ -3,6 +3,9 @@
 .oque-e {
     padding: 100px;
 }
+.conteudo {
+    margin-top: 130px;
+}
 
 .add {
   margin: 100px;
@@ -304,6 +307,52 @@ padding-bottom: 50px;
 		margin-bottom: 30px;
 	}
 	/* FIM FOOTER
+  ============================================================================================ */
+  
+  /* INÍCIO EX-ALUNOS
+	============================================================================================ */
+	.home_banner_area {
+		background-size: cover;
+		margin-bottom: 0px;
+	}
+	.testimonials_inner .testi_left_text {
+		margin-top: 0px;
+		margin-bottom: 50px;
+	}
+	.team_inner{
+		margin-bottom: -30px;
+	}
+	.team_item{
+		max-width: 263px;
+		margin: 0px auto 30px;
+	}
+	.services_item{
+		max-width: 360px;
+		margin: 0px auto 30px;
+	}
+	.builder_inner .builder_item {
+		flex: 0 0 50%;
+		max-width: 50%;
+	}
+	.counter_inner .counter_item {
+		flex: 0 0 33.33%;
+		max-width: 33.33%;
+		margin-bottom: 30px;
+	}
+	.counter_inner{
+		margin-bottom: -30px !important;
+		overflow: hidden;
+	}
+	.testi_item .media {
+		padding: 20px 8px;
+	}
+	.about_inner .ab_left_text {
+		margin-top: 0px;
+		padding-right: 0px;
+		margin-bottom: 30px;
+  }
+
+    	/* FIM EX-ALUNOS
   ============================================================================================ */
   
   	/* INÍCIO DEPOIMENTOS
@@ -709,31 +758,13 @@ opacity: 1;
 
    	/* FIM LOGIN & REGISTRAR
   ============================================================================================ */
+        
 
-    	/* INÍCIO FOOTER
-  ============================================================================================ */
+   .panel_info {
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
 
-  .ajuste-footer {
-    position: absolute;
-    bottom: 0;
-  }
-     	/* FIM FOOTER
-  ============================================================================================ */
-
-  .aluno-info {
-    margin: 150px;
-  }
-
-  .custom-tab {
-    display: none;
-  }
-
-  .edit-form {
-    padding-right: 30px;
-    padding-left: 30px;
-    width: 60%;
-  }
-
-  a {
-    cursor: pointer
+    padding: 100px;
+    box-shadow: 0 0 80px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
   }

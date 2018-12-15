@@ -4,7 +4,7 @@ class Login extends CI_Controller {
 
     public function index() {
         
-        $data['Título_da_pagina'] = 'Login';
+        $data['titulo_da_pagina'] = 'Login';
         $data['_view'] = 'login';
         $this->load->view('layouts/main',$data);
     }
@@ -36,7 +36,7 @@ class Login extends CI_Controller {
                         
                         $this->session->set_userdata($dados);
                         $this->session->set_userdata('logado', 'aluno');
-                        redirect("Aluno");
+                        redirect("Aluno\meus_dados");
                         
                     }
                     break;
@@ -50,7 +50,7 @@ class Login extends CI_Controller {
                         
                         $this->session->set_userdata($dados);
                         $this->session->set_userdata('logado', 'coordenador');
-                        redirect("Coordenador/home");
+                        redirect("Coordenador");
                         
                     }
                                        

@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="icon" href="img/favicon.png" type="image/png">
         <title>Valeu a Pena? | UFF </title>
-        
+
         <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/bootstrap/css/bootstrap.css">
         <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/custom.css">
         <link rel="stylesheet" href="<?php echo base_url() ?>assets/fonts/font-awesome/css/font-awesome.min.css">
@@ -21,29 +21,35 @@
         ?>
 
         <div class="container">
-            <p></p>
-            <?php
-            echo "<h1> $Título_da_pagina </h1>";
-            if (isset($_view) && $_view) {
-                $this->load->view($_view);
-            }
-            ?>
-
-        </div>
-
-    <footer class="page-footer font-small blue pt-4">
-        <div class="container-fluid text-center">
-            <div class="row">
-                <p>2018. Desenvolvido por Catarina Ribeiro e Duerton Ralph</p>
+            <div class="conteudo">
+                <p></p>
+                <?php
+                echo "<h1> $titulo_da_pagina </h1>";
+                if (isset($_view) && $_view) {
+                    $this->load->view($_view);
+                }
+                ?>
             </div>
         </div>
-    </footer>
+
+
+        <footer id="subfooter" class="clearfix">
+            <hr>
+            <div class="container">
+                <div class="row text-justify">
+                    <div class="col-md-12">
+                        <p>Desenvolvido por: Catarina Ribeiro e Duerton Ralph</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
 
         <!-- JavaScript -->
         <script src="<?php echo base_url() ?>assets/js/jquery-3.2.1.min.js"></script>
         <script src="<?php echo base_url() ?>assets/js/popper.js"></script>
-        <script src="<?php echo base_url() ?>assets/js/bootstrap.min.js"></script>
-        <script src="<?php echo base_url() ?>assets/js/tcc.js"></script>      
+        <script src="<?php echo base_url() ?>assets/js/bootstrap.min.js"></script>    
+
     </body>
 </html>
 

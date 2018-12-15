@@ -1,15 +1,17 @@
 <div class="pull-left">
 	<a href="<?php echo site_url('coordenador/add'); ?>" class="btn btn-success">Incluir</a> 
+        <a href="<?php echo site_url('coordenador/alterar_senha'); ?>" class="btn btn-success">Alterar Senha</a> 
         <p></p>
 </div>
 
+
+
 <table class="table table-striped table-bordered">
-<div class="row oque-e">
     <tr>
 		<th>ID</th>
 		<th>Nome</th>
-		<th>CPF</th>
-		<th>E-mail</th>
+		<th>Cpf</th>
+		<th>Email</th>
 		<th>Ações</th>
     </tr>
 	<?php foreach($coordenador as $c){ ?>
@@ -26,6 +28,5 @@
 	<?php } ?>
 </table>
 <div class="pull-right">
-    <?php echo $this->pagination->create_links(); ?>    
-</div>
+    <?php echo $paginacao ?>    
 </div>

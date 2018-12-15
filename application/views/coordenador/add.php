@@ -15,13 +15,6 @@
 		</div>
 	</div>
 	<div class="form-group">
-		<label for="senha" class="col-md-4 control-label"><span class="text-danger">*</span>Senha</label>
-		<div class="col-md-8">
-			<input type="text" name="senha" value="<?php echo $this->input->post('senha'); ?>" class="form-control" id="senha" />
-			<span class="text-danger"><?php echo form_error('senha');?></span>
-		</div>
-	</div>
-	<div class="form-group">
 		<label for="email" class="col-md-4 control-label"><span class="text-danger">*</span>Email</label>
 		<div class="col-md-8">
 			<input type="text" name="email" value="<?php echo $this->input->post('email'); ?>" class="form-control" id="email" />
