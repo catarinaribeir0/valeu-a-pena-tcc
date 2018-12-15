@@ -313,5 +313,37 @@ class Aluno extends CI_Controller {
         $data['_view'] = 'aluno/painel_ex';
         $this->load->view('layouts/main', $data);
     }
+    
+    function painel_ex() {
+        
+        if ($_SERVER['REQUEST_METHOD'] === 'POST'){
+            $anoselecionado = (int) $this->input->post('selecao_ano');
+        } else{
+            $anoselecionado = '11';
+        }
+        
+        //echo $anoselecionado;
+        //die();
+        $data['anos']=  $this->Aluno_model->get_anos();
+        $data['anoselecionado']=  $anoselecionado;
+        $dados = $this->Aluno_model->get_aluno_por_ano($anoselecionado);
+        
+        $alunos = array();
+        foreach($dados as $a) {
+            $foto_aluno = $a['foto'].".jpg";
+            if (!file_exists(FCPATH . "images/team/$foto_aluno")) {
+                $a['foto'] = base_url(SEM_IMAGEM);
+            } else {
+                $a['foto'] = base_url(PATH_IMAGEM . $foto_aluno);
+            }
+            array_push($alunos, $a);
+
+        }
+        $data['alunos'] = $alunos;
+        
+        $data['titulo_da_pagina'] = 'Ex-alunos';
+        $data['_view'] = 'aluno/painel_ex';
+        $this->load->view('layouts/main', $data);
+    }
 
 }

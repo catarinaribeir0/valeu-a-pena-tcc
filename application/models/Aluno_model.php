@@ -28,6 +28,23 @@ class Aluno_model extends CI_Model {
         return $this->db->count_all_results();
     }
 
+<<<<<<< Updated upstream
+=======
+
+    function get_anos() {
+        $this->db->select('SUBSTRING(matricula, 2, 2) as ano');
+        $this->db->group_by("SUBSTRING(matricula, 2, 2)");
+        return $this->db->get('alunos')->result_array();
+    }
+
+    function get_aluno_por_ano($ano) {
+        $this->db->select('nome, matricula, funcao, empresa, id, id as foto');
+        $this->db->order_by('nome', 'asc');
+        $this->db->where('SUBSTRING(matricula, 2, 2) =', $ano);
+        return $this->db->get('alunos')->result_array();
+    }
+        
+>>>>>>> Stashed changes
     /*
      * Get all alunos
      */
