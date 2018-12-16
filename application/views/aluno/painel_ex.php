@@ -2,7 +2,7 @@
 <?php echo form_open('Aluno/painel_ex') ?>
 <div class="row">
     <div class="col-8"> 
-
+    <h1 class="custom-text-primary"> Ex-alunos</h1> <br>
         <div class="form-group">
             <div class="col-md-8">
                 <select name="selecao_ano" id="selecao_ano" class="form-control">
@@ -14,6 +14,7 @@
                     }
                     ?>
                 </select>
+                
             </div>
             <div class="form-group">
                 <button type="submit" class="btn btn-success">Filtrar</button>
