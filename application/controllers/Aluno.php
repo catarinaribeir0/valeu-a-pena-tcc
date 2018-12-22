@@ -64,7 +64,7 @@ class Aluno extends CI_Controller {
     }
 
     /*
-     * Editing a aluno
+     * Editando aluno pelo peril coordenador
      */
 
     function edit($id) {
@@ -82,6 +82,7 @@ class Aluno extends CI_Controller {
             $this->form_validation->set_rules('funcao', 'Função', 'required|max_length[30]');
 
             if ($this->form_validation->run()) {
+                
                 $params = array(
                     'nome' => $this->input->post('nome'),
                     'cpf' => $this->input->post('cpf'),
@@ -90,13 +91,13 @@ class Aluno extends CI_Controller {
                     'depoimento' => $this->input->post('depoimento'),
                     'empresa' => $this->input->post('empresa'),
                     'funcao' => $this->input->post('funcao'),
-                );
+                );               
 
                 $this->Aluno_model->update_aluno($id, $params);
                 redirect('aluno/index');
             } else {
                 $data['titulo_da_pagina'] = 'Editar Ex-Aluno';
-                $data['_view'] = 'aluno/edit';
+                $data['_view'] = 'aluno/edit_meusdados';
                 $this->load->view('layouts/main', $data);
             }
         } else {
@@ -132,7 +133,7 @@ class Aluno extends CI_Controller {
         $this->index();
     }
 
-    function habilitar($id) {
+    function aprovarDepoimento($id) {
         $aluno = $this->Aluno_model->get_aluno($id);
 
         if ($aluno['depoimento_aprovado'] == 'S') {
@@ -179,7 +180,7 @@ class Aluno extends CI_Controller {
 
     function editar_meus_dados() {
 
-        if ($this->session->userdata('logado') == 'aluno') {
+        if ($this->session->userdata('logado') == 'aluno'){
             $data['aluno'] = $this->Aluno_model->get_aluno($this->session->userdata('id'));
             $this->load->library('form_validation');
             $this->form_validation->set_rules('nome', 'Nome', 'required|max_length[50]');
@@ -200,6 +201,11 @@ class Aluno extends CI_Controller {
                     'empresa' => $this->input->post('empresa'),
                     'funcao' => $this->input->post('funcao'),
                 );
+
+                
+                if( $this->input->post('depoimento') != $this->session->userdata('depoimento')){
+                    $params['depoimento_aprovado'] = 'N';
+                }
 
                 $this->Aluno_model->update_aluno($this->session->userdata('id'), $params);
                 $dados = $this->Aluno_model->get_aluno($this->session->userdata('id'));

@@ -50,7 +50,7 @@ class Login extends CI_Controller {
                         
                         $this->session->set_userdata($dados);
                         $this->session->set_userdata('logado', 'coordenador');
-                        redirect("Coordenador");
+                        redirect("Coordenador/index");
                         
                     }
                                        

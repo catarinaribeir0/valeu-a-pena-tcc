@@ -18,7 +18,7 @@
           <input checked="checked" value="aluno" type="radio" id="tipo_usuario" name="tipo_usuario">Ex-Aluno
         </label>
         <label class="radio-inline">
-          <input type="radio" id="tipo_usuario" value="coordenador" name="coordenador">Coordenador
+          <input type="radio" id="tipo_usuario" value="coordenador" name="tipo_usuario">Coordenador
         </label>
         </div>
         <button type="submit" class="btn btn-success">Login</button>

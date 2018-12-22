@@ -25,7 +25,7 @@ class Coordenador extends CI_Controller {
 
         $data['coordenador'] = $this->Coordenador_model->get_all_coordenador($params);
         $data['titulo_da_pagina'] = 'Lista de Coordenadores';
-        $data['_view'] = 'coordenador/index';
+        $data['_view'] = 'coordenador/home';
         $this->load->view('layouts/main', $data);
     }
 
@@ -111,9 +111,9 @@ class Coordenador extends CI_Controller {
             show_error('The coordenador you are trying to delete does not exist.');
     }
 
-    function edit($id) {
+    function edit() {
         // check if the coordenador exists before trying to edit it
-        $data['coordenador'] = $this->Coordenador_model->get_coordenador($id);
+        $data['coordenador'] = $this->Coordenador_model->get_coordenador($this->session->userdata('id'));
 
         if (isset($data['coordenador']['id'])) {
             $this->load->library('form_validation');
