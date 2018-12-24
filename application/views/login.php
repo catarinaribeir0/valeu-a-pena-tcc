@@ -7,7 +7,7 @@
         <div class="form-group">
           <label class="custom-label" for="cpf">CPF:</label>
           <input type="cpf" class="form-control" id="cpf" value="" placeholder="Entre com o CPF" name="cpf">
-          <small id="Help" class="text-center">Utilize pontos hífens. Exemplo: XXX.XXX.XXX-XX</small>
+          <small id="Help" class="text-center">Utilize pontos e hífens. Exemplo: XXX.XXX.XXX-XX</small>
         </div>
         <div class="form-group">
           <label class="custom-label" for="senha">Senha:</label>

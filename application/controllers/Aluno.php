@@ -213,7 +213,7 @@ class Aluno extends CI_Controller {
 
                 redirect('aluno/meus_dados');
             } else {
-                $data['titulo_da_pagina'] = 'Editar Meus Dados';
+                $data['titulo_da_pagina'] = '';
                 $data['_view'] = 'aluno/edit_meusdados';
                 $data['Título_da_pagina'] = 'Editar dados';
                 $this->load->view('layouts/main', $data);
