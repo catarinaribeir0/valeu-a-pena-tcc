@@ -1,3 +1,4 @@
+<h2 class="custom-text-primary">Lista de ex alunos</h2>
 <div class="pull-left">
 	<a href="<?php echo site_url('aluno/add'); ?>" class="btn btn-success">Incluir</a> 
         <p></p>

@@ -24,7 +24,7 @@ class Aluno extends CI_Controller {
 
         $data['alunos'] = $this->Aluno_model->get_all_alunos($params);
 
-        $data['titulo_da_pagina'] = 'Lista de Ex-alunos';
+        $data['titulo_da_pagina'] = '';
         $data['_view'] = 'aluno/lista';
         $this->load->view('layouts/main', $data);
     }
@@ -96,7 +96,7 @@ class Aluno extends CI_Controller {
                 $this->Aluno_model->update_aluno($id, $params);
                 redirect('aluno/index');
             } else {
-                $data['titulo_da_pagina'] = 'Editar Ex-Aluno';
+                $data['titulo_da_pagina'] = '';
                 $data['_view'] = 'aluno/edit_meusdados';
                 $this->load->view('layouts/main', $data);
             }

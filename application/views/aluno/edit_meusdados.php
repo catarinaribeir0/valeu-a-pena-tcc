@@ -1,5 +1,5 @@
 <?php echo form_open('aluno/editar_meus_dados/', array("class" => "form-horizontal")); ?>
-<h1 class="custom-text-primary">Editar meus dados</h1> <br>
+<h1 class="custom-text-primary">Editar dados</h1> <br>
 
 
 <div class="form-group">

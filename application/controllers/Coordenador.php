@@ -24,7 +24,7 @@ class Coordenador extends CI_Controller {
         $this->pagination->initialize($config);
 
         $data['coordenador'] = $this->Coordenador_model->get_all_coordenador($params);
-        $data['titulo_da_pagina'] = 'Lista de Coordenadores';
+        $data['titulo_da_pagina'] = '';
         $data['_view'] = 'coordenador/home';
         $this->load->view('layouts/main', $data);
     }
