@@ -15,15 +15,11 @@ class Aluno extends CI_Controller {
     function index() {
         $params['limit'] = RECORDS_PER_PAGE;
         $params['offset'] = ($this->input->get('per_page')) ? $this->input->get('per_page') : 0;
-
         $config = $this->config->item('pagination');
         $config['base_url'] = site_url('aluno/index?');
         $config['total_rows'] = $this->Aluno_model->get_all_alunos_count();
-
         $this->pagination->initialize($config);
-
         $data['alunos'] = $this->Aluno_model->get_all_alunos($params);
-
         $data['titulo_da_pagina'] = '';
         $data['_view'] = 'aluno/lista';
         $this->load->view('layouts/main', $data);
@@ -54,9 +50,12 @@ class Aluno extends CI_Controller {
             );
 
             $aluno_id = $this->Aluno_model->add_aluno($params);
-            redirect('Welcome');
+            $this->session->set_flashdata('response',"Dados inseridos com sucesso");
+            if($this->session->userdata('logado') == 'coordenador'){
+                redirect('Aluno/index');
+            }
+            redirect('Login/index');
         } else {
-            
         $data['titulo_da_pagina'] = '';
         $data['_view'] = 'aluno/add';
         $this->load->view('layouts/main', $data);
@@ -71,7 +70,6 @@ class Aluno extends CI_Controller {
 
         if ($this->session->userdata('logado') == 'coordenador') {
             $data['aluno'] = $this->Aluno_model->get_aluno($id);
-
             $this->load->library('form_validation');
             $this->form_validation->set_rules('nome', 'Nome', 'required|max_length[50]');
             $this->form_validation->set_rules('cpf', 'Cpf', 'required|max_length[14]');
@@ -82,7 +80,6 @@ class Aluno extends CI_Controller {
             $this->form_validation->set_rules('funcao', 'Função', 'required|max_length[30]');
 
             if ($this->form_validation->run()) {
-                
                 $params = array(
                     'nome' => $this->input->post('nome'),
                     'cpf' => $this->input->post('cpf'),
@@ -91,13 +88,14 @@ class Aluno extends CI_Controller {
                     'depoimento' => $this->input->post('depoimento'),
                     'empresa' => $this->input->post('empresa'),
                     'funcao' => $this->input->post('funcao'),
-                );               
+                );
 
                 $this->Aluno_model->update_aluno($id, $params);
+                $this->session->set_flashdata('response',"Dados atualizados com sucesso");
                 redirect('aluno/index');
             } else {
                 $data['titulo_da_pagina'] = '';
-                $data['_view'] = 'aluno/edit_meusdados';
+                $data['_view'] = 'aluno/edit_aluno';
                 $this->load->view('layouts/main', $data);
             }
         } else {
@@ -115,6 +113,7 @@ class Aluno extends CI_Controller {
         // check if the aluno exists before trying to delete it
         if (isset($aluno['id'])) {
             $this->Aluno_model->delete_aluno($id);
+            $this->session->set_flashdata('response',"Aluno removido com sucesso");
             redirect('aluno/index');
         } else
             show_error('The aluno you are trying to delete does not exist.');
@@ -129,7 +128,7 @@ class Aluno extends CI_Controller {
             $params = array('cadastro_aprovado' => 'S');
         }
         $this->Aluno_model->aprovar_aluno($id, $params);
-
+        $this->session->set_flashdata('response',"Aluno removido com sucesso");
         $this->index();
     }
 
@@ -142,7 +141,7 @@ class Aluno extends CI_Controller {
             $params = array('depoimento_aprovado ' => 'S');
         }
         $this->Aluno_model->update_aluno($id, $params);
-
+        $this->session->set_flashdata('response',"Aluno removido com sucesso");
         $this->index();
     }
 
@@ -210,7 +209,7 @@ class Aluno extends CI_Controller {
                 $this->Aluno_model->update_aluno($this->session->userdata('id'), $params);
                 $dados = $this->Aluno_model->get_aluno($this->session->userdata('id'));
                 $this->session->set_userdata($dados);
-
+                $this->session->set_flashdata('response',"Dados atualizados com sucesso");
                 redirect('aluno/meus_dados');
             } else {
                 $data['titulo_da_pagina'] = '';
@@ -241,7 +240,7 @@ class Aluno extends CI_Controller {
                 $data['titulo_da_pagina'] = '';
                 $this->load->view('layouts/main', $data);
             } else {
-
+                $this->session->set_flashdata('response',"Foto atualizada com sucesso");
                 redirect('Aluno/meus_dados');
             }
         } else {
@@ -317,6 +316,38 @@ class Aluno extends CI_Controller {
         
         $data['titulo_da_pagina'] = '';
         $data['_view'] = 'aluno/painel_ex';
+        $this->load->view('layouts/main', $data);
+    }
+
+    function painel_depoimento() {
+        
+        if ($_SERVER['REQUEST_METHOD'] === 'POST'){
+            $anoselecionado = (int) $this->input->post('selecao_ano');
+        } else{
+            $anoselecionado = '11';
+        }
+        
+        //echo $anoselecionado;
+        //die();
+        $data['anos']=  $this->Aluno_model->get_anos();
+        $data['anoselecionado']=  $anoselecionado;
+        $dados = $this->Aluno_model->get_aluno_por_ano($anoselecionado);
+        
+        $alunos = array();
+        foreach($dados as $a) {
+            $foto_aluno = $a['foto'].".jpg";
+            if (!file_exists(FCPATH . "images/team/$foto_aluno")) {
+                $a['foto'] = base_url(SEM_IMAGEM);
+            } else {
+                $a['foto'] = base_url(PATH_IMAGEM . $foto_aluno);
+            }
+            array_push($alunos, $a);
+
+        }
+        $data['alunos'] = $alunos;
+        
+        $data['titulo_da_pagina'] = '';
+        $data['_view'] = 'aluno/painel_depoimento';
         $this->load->view('layouts/main', $data);
     }
 

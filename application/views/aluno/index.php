@@ -1,3 +1,4 @@
+<h4><?php echo $this->session->flashdata('response');?></h4>
 <div class="panel_info">
     <div class="row">
         <div class="col-md-4">

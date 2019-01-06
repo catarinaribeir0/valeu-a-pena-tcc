@@ -25,7 +25,7 @@
 	<div class="form-group">
 		<div class="col-sm-offset-4 col-sm-8">
 			<button type="submit" class="btn btn-success">Confirmar</button>
-                        <a href="<?php echo base_url('Coordenador')?>" class="btn btn-danger" role="button">Retornar</a>
+            <a href="<?php echo base_url('Coordenador')?>" class="btn btn-danger" role="button">Retornar</a>
         </div>
 	</div>
 	

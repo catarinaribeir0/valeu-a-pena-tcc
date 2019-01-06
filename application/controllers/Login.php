@@ -30,10 +30,10 @@ class Login extends CI_Controller {
                     $this->load->model("Aluno_model");
                     $dados = $this->Aluno_model->login($data);
                     if (empty($dados)){
+                        $this->session->set_flashdata('response',"Login ou senha incorretos");
                         $this->index();  
                     }
                     else{
-                        
                         $this->session->set_userdata($dados);
                         $this->session->set_userdata('logado', 'aluno');
                         redirect("Aluno\meus_dados");
@@ -44,10 +44,10 @@ class Login extends CI_Controller {
                     $this->load->model("Coordenador_model");
                     $dados = $this->Coordenador_model->login($data);
                     if (empty($dados)){
+                        $this->session->set_flashdata('response',"Login ou senha incorretos");
                         $this->index();  
                     }
                     else{
-                        
                         $this->session->set_userdata($dados);
                         $this->session->set_userdata('logado', 'coordenador');
                         redirect("Coordenador/index");

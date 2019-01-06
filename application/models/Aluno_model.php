@@ -41,7 +41,7 @@ class Aluno_model extends CI_Model {
     }
 
     function get_aluno_por_ano($ano) {
-        $this->db->select('nome, matricula, funcao, empresa, id, id as foto');
+        $this->db->select('nome, matricula, funcao, empresa, depoimento, id, id as foto');
         $this->db->order_by('nome', 'asc');
         $this->db->where('SUBSTRING(matricula, 2, 2) =', $ano);
         return $this->db->get('alunos')->result_array();
@@ -52,12 +52,21 @@ class Aluno_model extends CI_Model {
         $this->db->where('depoimento_aprovado =', 'S');
         $this->db->where('cadastro_aprovado =', 'S');
         return $this->db->count_all_results();
-        ;
     }
 
     function get_alldepoimentos($params = array()) {
         $this->db->select('nome, matricula,depoimento, funcao, empresa, id, id as foto');
         $this->db->where('depoimento_aprovado =', 'S');
+        $this->db->where('cadastro_aprovado =', 'S');
+        $this->db->order_by('id', 'desc');
+        if (isset($params) && !empty($params)) {
+            $this->db->limit($params['limit'], $params['offset']);
+        }
+        return $this->db->get('alunos')->result_array();
+    }
+
+    function get_allcadastroAprovado($params = array()) {
+        $this->db->select('nome, matricula,depoimento, funcao, empresa, id, id as foto');
         $this->db->where('cadastro_aprovado =', 'S');
         $this->db->order_by('id', 'desc');
         if (isset($params) && !empty($params)) {

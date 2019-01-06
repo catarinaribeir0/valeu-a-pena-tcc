@@ -25,19 +25,22 @@
                 <li><a href="<?php echo base_url() ?>" class="smooth-scroll a-header">Home</a></li>
                 <?php if ($currentPage == base_url() ) { ?>
                     <li><a href="<?php echo base_url('#depoimentos') ?>" class="smooth-scroll a-header">Depoimentos</a></li>
-                        <li><a href="#ex-alunos" class="smooth-scroll a-header">Nossos ex-alunos</a></li>
-                    <?php } else {  ?>
-                        <li><a href="<?php echo base_url('Aluno/painel_ex') ?>" class="smooth-scroll a-header">Nossos ex-alunos</a></li>
+                    <li><a href="#ex-alunos" class="smooth-scroll a-header">Nossos ex-alunos</a></li>
+                <?php } else {  ?>
+                    <li><a href="<?php echo base_url('Aluno/painel_depoimento') ?>" class="smooth-scroll a-header">Depoimentos</a></li>
+                    <li><a href="<?php echo base_url('Aluno/painel_ex') ?>" class="smooth-scroll a-header">Nossos ex-alunos</a></li>
                 <?php } ?>
               
                 <li><a href="#contact" class="smooth-scroll a-header">Contato</a></li>
                 <?php if (($this->session->userdata('logado') == 'coordenador')) { ?>
                        <li><a href="<?php echo base_url('Aluno/index') ?>" class="smooth-scroll a-header">Ex-alunos</a></li>
-                       <li><a href="<?php echo base_url('Coordenador') ?>" class="smooth-scroll a-header">Coordenadores</a></li>
                  <?php } ?>
-                <?php if (($this->session->userdata('logado') == 'aluno') || ($this->session->userdata('logado') == 'coordenador')) { ?>
+                <?php if ($this->session->userdata('logado') == 'aluno') { ?>
                     <li><a href="<?php echo base_url('Aluno/meus_dados') ?>" class="smooth-scroll a-header">Meus dados</a>
-                    <li><a href="<?php echo base_url('Logout') ?>" class="smooth-scroll a-header">Logout</a
+                    <li><a href="<?php echo base_url('Logout') ?>" class="smooth-scroll a-header">Logout</a>
+                    <?php } else if ($this->session->userdata('logado') == 'coordenador'){ ?>
+                    <li><a href="<?php echo base_url('Coordenador/index') ?>" class="smooth-scroll a-header">Meus dados</a>
+                    <li><a href="<?php echo base_url('Logout') ?>" class="smooth-scroll a-header">Logout</a>
                     <?php } else { ?>
                     <li><a href="<?php echo base_url('Aluno/add') ?>" class="smooth-scroll a-header">Registrar</a></li>
                     <li><a href="<?php echo base_url('Login') ?>" class="smooth-scroll a-header">Login</a></li>
