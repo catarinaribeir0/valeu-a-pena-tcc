@@ -28,31 +28,6 @@ jQuery(function($) {
         }
     });
 
-    $(window).on('scroll', function(e) {
-        if (scrolling) {
-            return;
-        }
-
-        var scrollTop = $(window).scrollTop(),
-            closestDistance = Number.MAX_VALUE,
-            closestId;
-
-            $('a.smooth-scroll').each(function(i, item) {
-                var id = $(this).attr('href').replace(/^#/, ''),
-                    offset = $('#' + id).offset();
-
-                if (offset && Math.abs(scrollTop - offset.top) < closestDistance) {
-                    closestDistance = Math.abs(scrollTop - offset.top);
-                    closestId = id;
-                }
-            });
-
-        if (closestId) {
-            setActive($('.navbar li a[href="#' + closestId + '"]').parent());
-        }
-    });
-
-
     // collapsible panels
     $('.panel-heading span.clickable').on("click", function (e) {
         var panel = $(this).closest('.panel'),
