@@ -1,3 +1,5 @@
+<br>
+<h4><?php echo $this->session->flashdata('response');?></h4>
 <h2 class="custom-text-primary">Registre-se</h2>
 <?php echo form_open('aluno/add',array("class"=>"form-horizontal")); ?>
     

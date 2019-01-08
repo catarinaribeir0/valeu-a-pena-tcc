@@ -66,154 +66,69 @@
                 <section class="testimonials_area p_120">
                     <div class="container">
                         <div class="testi_slider owl-carousel">
-                            <div class="item">
-                                <div class="testi_item">
-                                    <div class="media">
-                                        <!--<div class="d-flex">
-                                                <img class="img-fluid" src="images/team/testi-1.png">
-                                             </div>-->
-                                        <div class="media-body">
-                                            <p>Curso voltado ao mercado, com menos teoria e mais prática.</p>
-                                            <h4>Marcus Vinicius</h4>
-                                            <h5>Desenvolvedor Android em Full Lab</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <?php foreach ($depoimento as $aluno):?>
                             <div class="item">
                                 <div class="testi_item">
                                     <div class="media">
                                         <div class="media-body">
-                                            <p>Sou eternamente grata à todos os professores por serem maravilhosos. Sem eles, não teria chegado até aqui!</p>
-                                            <h4>Ana Barroso</h4>
-                                            <h5>Product Manager em Microsoft</h5>
+                                            <p><?php echo $aluno['depoimento'] ?></p>
+                                            <h4><?php echo $aluno['nome'] ?></h4>
+                                            <h5><?php echo $aluno['funcao'] ? $aluno['funcao'] : " - " ?> em <?php echo $aluno['empresa'] ? $aluno['empresa'] : " -" ?></h5>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="item">
-                                <div class="testi_item">
-                                    <div class="media">
-                                        <!--<div class="d-flex">
-                                                <img src="images/team/team-2.png" alt="">
-                                             </div>-->
-                                        <div class="media-body">
-                                            <p>Acredito que o curso tenha me disponibilizado tudo o que o mercado necessita!</p>
-                                            <h4>Luiz Barbosa</h4>
-                                            <h5>Engenheira de software em B2W</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="testi_item">
-                                    <div class="media">
-                                        <div class="media-body">
-                                            <p>Curso muito bom, com professores exigentes porém muito atenciosos. Indico para todos!</p>
-                                            <h4>Mariana Alves</h4>
-                                            <h5>Analista de sistemas em Globo.com</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="testi_item">
-                                    <div class="media">
-                                        <div class="media-body">
-                                            <p>Amei esta experiência... Os laboratórios são novos, com boa infraestrutura e professores sempre atualizados nas novas tecnologias!</p>
-                                            <h4>Rodrigo Monte</h4>
-                                            <h5>Cientista de dados em Google</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <?php endforeach;?>
                         </div>
                     </div>  
                 </section>    
                 <small id="Help" class="text-center">Arraste para a direita para visualizar mais depoimentos</small>
             </div>
         </div>
+        <div class="text-center">
+            <a type="submit" href="<?php echo base_url('Aluno/painel_depoimento') ?>" value="submit" class="btn btn-success">Ver todos</a>
+        </div>
 <!--  **FIM - DEPOIMENTOS ** -->
 
 <!--  **INÍCIO - EX-ALUNOS ** -->
 <div class="container-stories">
-	 <div class="container">
+	<div class="container">
 	    <div class="page-header" id="ex-alunos">
-        <h1 class="text-center custom-text-primary">Nossos ex-alunos</h1>
+            <h1 class="text-center custom-text-primary">Nossos ex-alunos</h1>
 	    </div>
 		<div class="row">
+        <?php for ($i = 0; $i < 3 && $cont > $i; $i++) {?>
 			<div class="col-md-4">
 				<div class="row">
 					<div class="col-md-4">
-						<img class="img-responsive" src="./images/team/team-1.jpg"/>
+                        <img src="<?php echo $alunosCadastroAprovado[$i]['foto'] ?>" class="media-object" style="width:60px">
 					</div>
 					<div class="col-md-4">
-						<h3>Alan Alfradique</h3>
-					    <p class="text-justify">Analista de sistemas em B2W</p>
+						<h4><?php echo $alunosCadastroAprovado[$i]['nome'] ?></h4>
+					    <p class="text-justify"><?php echo $alunosCadastroAprovado[$i]['funcao'] ? $alunosCadastroAprovado[$i]['funcao'] : " - " ?> em <?php echo $alunosCadastroAprovado[$i]['empresa'] ? $alunosCadastroAprovado[$i]['empresa'] : " -" ?></p>
                     </div>
                 </div>
 			</div>
-			<div class="col-md-4">
-				<div class="row">
-					<div class="col-md-4">
-						<img class="img-responsive" src="images/team/team-2.jpg" />
-					</div>
-					<div class="col-md-4">
-						<h3>Lucas Oliveira</h3>
-						<p class="text-justify">Cientista de dados em Nubank</p>
-					</div>
-				</div>
-            </div>
-            <div class="col-md-4">
-				<div class="row">
-					<div class="col-md-4">
-						<img class="img-responsive" src="images/team/team-5.jpg" />
-					</div>
-					<div class="col-md-4">
-						<h3>Julia Alves</h3>
-						<p class="text-justify">Produt Manager em Samsung</p>
-					</div>
-				</div>
-            </div>
+        <?php }?>    
         </div>
 		</div>
 		<br/>
         <br/>
         <div class="container">
 		<div class="row">
+        <?php for ($i = 3; $i < 6 && $cont > $i; $i++) {?>
 			<div class="col-md-4">
 				<div class="row">
 					<div class="col-md-4">
-						<img class="img-responsive" src="./images/team/team-1.jpg"/>
+                        <img src="<?php echo $alunosCadastroAprovado[$i]['foto'] ?>" class="media-object" style="width:60px">
 					</div>
 					<div class="col-md-4">
-						<h3>Alan Alfradique</h3>
-					    <p class="text-justify">Analista de sistemas em B2W</p>
+						<h3><?php echo $alunosCadastroAprovado[$i]['nome'] ?></h3>
+					    <p class="text-justify"><?php echo $alunosCadastroAprovado[$i]['funcao'] ? $alunosCadastroAprovado[$i]['funcao'] : " - " ?> em <?php echo $alunosCadastroAprovado[$i]['empresa'] ? $alunosCadastroAprovado[$i]['empresa'] : " -" ?></p>
                     </div>
                 </div>
 			</div>
-			<div class="col-md-4">
-				<div class="row">
-					<div class="col-md-4">
-						<img class="img-responsive" src="images/team/team-2.jpg" />
-					</div>
-					<div class="col-md-4">
-						<h3>Lucas Oliveira</h3>
-						<p class="text-justify">Cientista de dados em Nubank</p>
-					</div>
-				</div>
-            </div>
-            <div class="col-md-4">
-				<div class="row">
-					<div class="col-md-4">
-						<img class="img-responsive" src="images/team/team-5.jpg" />
-					</div>
-					<div class="col-md-4">
-						<h3>Julia Alves</h3>
-						<p class="text-justify">Produt Manager em Samsung</p>
-					</div>
-				</div>
-            </div>
+        <?php }?>
         </div>
     </div>
 </div>

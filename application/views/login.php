@@ -1,3 +1,6 @@
+<br>
+<br>
+<h4><?php echo $this->session->flashdata('response');?></h4>
 <h2 class="custom-text-primary">Login</h2>
 
 <?php defined('BASEPATH') OR exit('No direct script access allowed');?>

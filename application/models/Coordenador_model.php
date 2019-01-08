@@ -69,8 +69,6 @@ class Coordenador_model extends CI_Model
     
     
     function login($match) {
-
-        $this->db->select('nome, cpf, email');
         $this->db->from('coordenador');
         $this->db->where($match);
         $this->db->limit(1);

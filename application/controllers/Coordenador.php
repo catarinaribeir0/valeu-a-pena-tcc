@@ -10,22 +10,26 @@ class Coordenador extends CI_Controller {
         $this->load->model('Coordenador_model');
     }
 
+    function index() {
+        $data['titulo_da_pagina'] = '';
+        $data['_view'] = 'coordenador/index';
+        $this->load->view('layouts/main', $data);
+    }
+
     /*
      * Listing of coordenador
      */
 
-    function index() {
+    function lista_coord() {
         $params['limit'] = RECORDS_PER_PAGE;
         $params['offset'] = ($this->input->get('per_page')) ? $this->input->get('per_page') : 0;
-
         $config = $this->config->item('pagination');
         $config['base_url'] = site_url('coordenador/index?');
         $config['total_rows'] = $this->Coordenador_model->get_all_coordenador_count();
         $this->pagination->initialize($config);
-
         $data['coordenador'] = $this->Coordenador_model->get_all_coordenador($params);
         $data['titulo_da_pagina'] = '';
-        $data['_view'] = 'coordenador/home';
+        $data['_view'] = 'coordenador/lista_coord';
         $this->load->view('layouts/main', $data);
     }
 
@@ -48,7 +52,8 @@ class Coordenador extends CI_Controller {
             );
 
             $coordenador_id = $this->Coordenador_model->add_coordenador($params);
-            redirect('Coordenador/index');
+            $this->session->set_flashdata('response',"Inserido com sucesso");
+            redirect('coordenador/lista_coord');
         } else {
             $data['titulo_da_pagina'] = 'Incluir coordenador';
             $data['_view'] = 'coordenador/add';
@@ -106,18 +111,18 @@ class Coordenador extends CI_Controller {
         // check if the coordenador exists before trying to delete it
         if (isset($coordenador['id'])) {
             $this->Coordenador_model->delete_coordenador($id);
-            redirect('coordenador/index');
+            $this->session->set_flashdata('response',"Removido com sucesso");
+            redirect('coordenador/lista_coord');
         } else
             show_error('The coordenador you are trying to delete does not exist.');
     }
 
     function edit() {
         // check if the coordenador exists before trying to edit it
-        $data['coordenador'] = $this->Coordenador_model->get_coordenador($this->session->userdata('id'));
 
-        if (isset($data['coordenador']['id'])) {
+        if ($this->session->userdata('logado') == 'coordenador') {
+            $data['coordenador'] = $this->Coordenador_model->get_coordenador($this->session->userdata('id'));
             $this->load->library('form_validation');
-
             $this->form_validation->set_rules('nome', 'Nome', 'required|max_length[40]');
             $this->form_validation->set_rules('cpf', 'Cpf', 'required|max_length[14]');
             $this->form_validation->set_rules('email', 'Email', 'required|max_length[255]|valid_email');
@@ -129,9 +134,12 @@ class Coordenador extends CI_Controller {
                     'email' => $this->input->post('email'),
                 );
 
-                $this->Coordenador_model->update_coordenador($id, $params);
+                $this->Coordenador_model->update_coordenador($this->session->userdata('id'), $params);
+                
+                $this->session->set_flashdata('response',"Salvo com sucesso");
                 redirect('coordenador/index');
             } else {
+                $this->session->set_flashdata('response',"Não foi possivel salvar");
                 $data['titulo_da_pagina'] = 'Editar coordenador';
                 $data['_view'] = 'coordenador/edit';
                 $this->load->view('layouts/main', $data);
