@@ -44,6 +44,7 @@ class Aluno_model extends CI_Model {
         $this->db->select('nome, matricula, funcao, empresa, depoimento, id, id as foto');
         $this->db->order_by('nome', 'asc');
         $this->db->where('SUBSTRING(matricula, 2, 2) =', $ano);
+        $this->db->where('cadastro_aprovado =', 'S');
         return $this->db->get('alunos')->result_array();
     }
 
